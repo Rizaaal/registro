@@ -4,12 +4,13 @@ import { Classi } from './model/pagine/classi.js';
 // DOM
 //const registro = document.querySelector('#registro');
 const main = document.querySelector('main');
-const title = document.querySelector('subtitle');
+const title = document.querySelector('#subtitle');
 const menuClassiButton = document.querySelector('button#classi');
 
+
 function showPage(page, specificatore=undefined){
-    subtitle.innerText = page.name;
-    console.log('showPage() = ', page);
+    title.innerText = page.name;
+    // console.log('showPage() = ', page);
     main.replaceChildren(page(specificatore)); 
 }
 
