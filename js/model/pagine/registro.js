@@ -5,18 +5,20 @@ export function registroPagina(classe){
     const table = document.createElement('table');
     console.log(classe);
 
-    classe.forEach(studente => {
-        const td = document.createElement('td');
-        let nome = document.createElement('tr');
-        nome.innerHTML = studente.nome;
-        td.appendChild(nome);
-
-        let cognome = document.createElement('tr');
-        cognome.innerHTML = studente.cognome;
-        td.appendChild(cognome);
-
-        registro.appendChild(td);
-    });
+    for (const key in classe.elenco) {
+        if (classe.elenco.hasOwnProperty(key)) {
+            const tr = document.createElement('tr');
+            let nome = document.createElement('td');
+            nome.innerHTML = classe.elenco[key].nome;
+            tr.appendChild(nome);
+    
+            let cognome = document.createElement('td');
+            cognome.innerHTML = classe.elenco[key].cognome;
+            tr.appendChild(cognome);
+    
+            table.appendChild(tr); 
+        }
+    }
 
     return table;
 }
