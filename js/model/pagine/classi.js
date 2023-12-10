@@ -4,20 +4,20 @@ import { showPage } from "../../view.js";
 // import { registro } from "../../view.js";
 import { registroPagina } from "./registro.js";
 
-const classi = getClassi();
-console.log(classi);
-
 function createButton(classe){
     const bottoneSelezione = document.createElement('button');
     bottoneSelezione.innerText = classe.nome;
     bottoneSelezione.addEventListener('click', e => {
-        console.log('nome classe in createButton() = ', classe.nome);
+        console.log(classe);
         showPage(registroPagina, classe);
     });
     return bottoneSelezione;
 }
 
 export function Classi(){
+    const classi = getClassi();
+    console.log(classi);
+
     const list = document.createElement('ul');
     const bottoneAggiungi = document.createElement('button');
 
