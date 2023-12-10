@@ -23,14 +23,13 @@ export function setClasse(classe){
 setClasse(new RegistroClasse('E', 1));
 
 export function insertStudente(nome, cognome){
-    let classe = JSON.parse(localStorage['1˚E'])
-    let newClasse = new RegistroClasse(classe.sezione, classe.anno);
-    newClasse.inserisci(new Studente(nome, cognome));
-    classe.elenco = newClasse.elenco;
+    let classe = JSON.parse(localStorage['1˚E']);
+    RegistroClasse.prototype.inserisci.apply(classe, [new Studente(nome, cognome)]);
+    // console.log(classe);
     setClasse(classe);
 }
 
-insertStudente('gabriele', 'Di Grazia');
+insertStudente('lorenzo', 'Di Grazia');
 
 
 setClasse(new RegistroClasse('E', 2));
