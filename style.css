@@ -1,0 +1,54 @@
+/* stili di normalizzazione */
+/* ------------------------------------------------------------ */
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* ------------------------------------------------------------ */
+
+body {
+    font-family: system-ui, 
+    -apple-system, 
+    BlinkMacSystemFont, 
+    'Segoe UI', 
+    Roboto, 
+    Oxygen, 
+    Ubuntu, 
+    Cantarell, 
+    'Open Sans', 
+    'Helvetica Neue', 
+    sans-serif;
+
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 0.8em;
+    color: #eee;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    width: 60%;
+    min-width: 250px;
+    margin: 12px auto;
+    padding: 1em;
+}
+
+table, td, tr, th {
+    border: solid 1px;
+    padding: 1em;
+}
+
+table {
+    margin: auto;
+    border-radius: 3px;
+}
