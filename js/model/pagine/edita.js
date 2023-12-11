@@ -3,7 +3,7 @@ import { showPage } from "../../view.js";
 import { registroPagina } from "./registro.js";
 
 export function edita(classe){
-    console.log(classe);
+    console.log(classe); 
     const form = document.createElement('div');
 
     //aggiungi studente
